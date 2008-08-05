@@ -1,0 +1,148 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{445996B6-0CEB-47E5-AA63-126290759995}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <MyType>WindowsForms</MyType>
+    <RootNamespace>ContaBlitz</RootNamespace>
+    <AssemblyName>ContaBlitz</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <DefineConstants>DEBUG=1,TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <DefineConstants>TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="Cuenta.vb" />
+    <Compile Include="CuentasManager.vb" />
+    <Compile Include="frmAddEditCuenta.Designer.vb" />
+    <Compile Include="frmAddEditCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddMovimiento.Designer.vb">
+      <DependentUpon>frmAddMovimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddMovimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddPartida.Designer.vb">
+      <DependentUpon>frmAddPartida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddPartida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBalanceAjustado.Designer.vb">
+      <DependentUpon>frmBalanceAjustado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBalanceAjustado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBalanceComprobacion.Designer.vb">
+      <DependentUpon>frmBalanceComprobacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBalanceComprobacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogoCuentas.Designer.vb" />
+    <Compile Include="frmCatalogoCuentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCierres.Designer.vb">
+      <DependentUpon>frmCierres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCierres.vb" />
+    <Compile Include="frmEditMonto.Designer.vb">
+      <DependentUpon>frmEditMonto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditMonto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstadoResultados.Designer.vb">
+      <DependentUpon>frmEstadoResultados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstadoResultados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLibroDiario.Designer.vb" />
+    <Compile Include="frmLibroDiario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPartidas.Designer.vb">
+      <DependentUpon>frmPartidas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPartidas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuenteDatos.vb" />
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimiento.vb" />
+    <Compile Include="Partida.vb" />
+    <Compile Include="PartidasManager.vb" />
+    <Compile Include="Program.vb" />
+    <EmbeddedResource Include="frmAddEditCuenta.resx">
+      <DependentUpon>frmAddEditCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddMovimiento.resx">
+      <DependentUpon>frmAddMovimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddPartida.resx">
+      <DependentUpon>frmAddPartida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBalanceAjustado.resx">
+      <DependentUpon>frmBalanceAjustado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBalanceComprobacion.resx">
+      <DependentUpon>frmBalanceComprobacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogoCuentas.resx">
+      <DependentUpon>frmCatalogoCuentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCierres.resx">
+      <DependentUpon>frmCierres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditMonto.resx">
+      <DependentUpon>frmEditMonto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstadoResultados.resx">
+      <DependentUpon>frmEstadoResultados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLibroDiario.resx">
+      <DependentUpon>frmLibroDiario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPartidas.resx">
+      <DependentUpon>frmPartidas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
