@@ -1,0 +1,1 @@
+A simple and generic accounting system made in VB.Net as a homework project for a subject in my career.. It can manage accounts and generate the General Sheet/Results Sheet reports. It uses an Access database to store the data. I wasn't able to choose a better DBMS, sorry :(
